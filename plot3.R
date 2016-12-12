@@ -2,7 +2,7 @@ require(ggplot2)
 require(plyr)
 
 # load NEI datasource
-#NEI <- readRDS("summarySCC_PM25.rds")
+NEI <- readRDS("summarySCC_PM25.rds")
 baltimore <- subset(NEI, fips == "24510", select=c("year", "type", "Emissions"))
 
 # source type
