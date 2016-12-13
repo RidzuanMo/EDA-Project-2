@@ -16,7 +16,7 @@ gp <- ggplot(pm0, aes(year, log(Emissions))) +
     geom_point() + 
     facet_grid(. ~ type) +
     geom_smooth() +
-    labs(title="Baltimore City", x="year", y="log(PM2.5)")
+    labs(title="Total Emissions in Baltimore City", x="year", y="log(PM2.5)")
 
 png("plot3.png",width=480,height=480,units="px")
     print(gp)
