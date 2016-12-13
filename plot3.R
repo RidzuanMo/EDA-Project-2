@@ -3,6 +3,8 @@ require(plyr)
 
 # load NEI datasource
 NEI <- readRDS("summarySCC_PM25.rds")
+
+# filtering Baltimore City dataset
 baltimore <- subset(NEI, fips == "24510", select=c("year", "type", "Emissions"))
 
 # source type
