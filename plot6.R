@@ -12,7 +12,7 @@ pm0 <- ddply(vehicles, .(year, fips), summarize, Emissions=sum(Emissions))
 pm0 <- transform(pm0, fips=factor(fips))
 
 # reassign level(fips) with names..
-levels(pm0$fips) <- c("Baltimore", "Los Angeles")
+levels(pm0$fips) <- c("Los Angeles", "Baltimore")
 
 # preparing graph
 gp <- ggplot(pm0, aes(year, log(Emissions))) + 
